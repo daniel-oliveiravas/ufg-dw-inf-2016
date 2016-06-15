@@ -1,4 +1,3 @@
-<%@ page import="java.util.DoubleSummaryStatistics" %>
 <%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
@@ -21,7 +20,7 @@
 </nav>
 
 <div class="row form-div">
-    <form class="col s12 offset-s3" action="imc">
+    <form class="col s12 offset-s3">
         <div class="row">
             <div class="input-field col s6">
                 <input id="peso_id" name="peso" type="number" step="any" class="validate">
@@ -49,6 +48,7 @@
 
         </div>
     </form>
+    <div class="col s12 offset-s3">Resultado: ${resultado}</div>
 </div>
 <script>
     $('select').material_select();
