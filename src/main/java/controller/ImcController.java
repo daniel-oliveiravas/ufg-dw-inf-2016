@@ -20,9 +20,9 @@ public class ImcController extends HttpServlet {
 
         Pessoa pessoa = new Pessoa(peso, altura, sexo);
         Double resultadoIMC = pessoa.calculaIMC();
+        resultadoIMC = Math.round(resultadoIMC * 100)/100.0;
 
         req.setAttribute("resultado", resultadoIMC);
-        System.out.println(resultadoIMC);
 
         req.getRequestDispatcher("imcResultado.jsp").forward(req, resp);
     }
